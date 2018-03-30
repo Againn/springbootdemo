@@ -16,11 +16,20 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 测试跳转到首页
+     * @return
+     */
     @RequestMapping(value = "/index")
     public String index(){
         return "user/index";
     }
 
+    /**
+     * 测试查询数据返回到页面
+     * @param name
+     * @return
+     */
     @RequestMapping(value="/show")
     @ResponseBody
     public String show(@RequestParam(value="name")String name){
